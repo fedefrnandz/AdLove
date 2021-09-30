@@ -33,6 +33,8 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public $timestamps=false;
+
     /**
      * The attributes that should be cast.
      *
@@ -41,4 +43,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function adminlte_image(){
+
+        return 'https://picsum.photos/300/300';
+    }
+
+    public function adminlte_desc(){
+
+        return "Administrador";
+    }
+
+    public function adminlte_profile_url(){
+
+        return "profile/username";
+    }
 }
